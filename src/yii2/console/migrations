@@ -9,8 +9,6 @@ yii migrate/create create_test_table --fields="id:primaryKey,name:string,created
 
 yii migrate/create create_tag_table --fields="id:primaryKey,text:string,status:integer"
 
-
-
 yii migrate/create create_category_table --fields="id:primaryKey,name:string,desc:string"
 
 yii migrate/create create_city_table --fields="id:primaryKey,name:string"
@@ -28,3 +26,23 @@ yii migrate/create create_tag_table --fields="id:primaryKey,text:string,status:i
 yii migrate/create create_junction_table_for_article_and_tag_tables
 
 yii migrate/create create_junction_table_for_category_and_article_tables
+
+
+Проект библиотека
+
+Таблица учителей
+yii migrate/create create_teacher_table --fields="id:primaryKey,user_id:integer:foreignKey(user),fio:string,sience:string,phone:string,status:integer,extra_info:string,created_at:timestamp:defaultValue(new Expression('NOW()')),updated_at:timestamp:defaultValue(new Expression('NOW()'))"
+
+Таблица групп
+yii migrate/create create_group_table --fields="id:primaryKey,сurator_id:integer:foreignKey(teacher),year_start:string,year_end:string,class:string,status:integer,created_at:timestamp:defaultValue(new Expression('NOW()')),updated_at:timestamp:defaultValue(new Expression('NOW()'))"
+
+Таблица студентов
+yii migrate/create create_student_table --fields="id:primaryKey,group_id:integer:foreignKey(group),user_id:integer:foreignKey(user),fio:string,phone:string,class:string,birthday:timestamp,status:integer,extra_info:string,created_at:timestamp:defaultValue(new Expression('NOW()')),updated_at:timestamp:defaultValue(new Expression('NOW()'))"
+
+Таблица дисциплин
+yii migrate/create create_subject_table --fields="id:primaryKey,name:string,description:string,status:integer,created_at:timestamp:defaultValue(new Expression('NOW()')),updated_at:timestamp:defaultValue(new Expression('NOW()'))"
+
+Таблица учебников
+yii migrate/create create_book_table --fields="id:primaryKey,subject_id:integer:foreignKey(subject),name:string,image_url:string,description:string,year:string,status:integer,isAvailable:boolean:defaultValue(true),created_at:timestamp:defaultValue(new Expression('NOW()')),updated_at:timestamp:defaultValue(new Expression('NOW()'))"
+
+Таблица учебных материалов
