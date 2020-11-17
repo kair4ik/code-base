@@ -9,7 +9,6 @@
             "email": "kair.21@mail.ru"
         }
     ],
-    "minimum-stability": "stable",
     "require": {
         "php": ">=5.4.0"
     },
