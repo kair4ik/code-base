@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Calculator;
+namespace kair4ik\package;
 
 
 class Calculator
