@@ -1,0 +1,19 @@
+{
+    "name": "kair4ik/code-base",
+    "description": "My code base",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "kair4ik",
+            "email": "kair.21@mail.ru"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "App\\Calculator\\": "src/"
+        }
+    }
+}
