@@ -1,0 +1,30 @@
+Создаем таблицу post
+yii migrate/create create_post_table --fields="author_id:integer:notNull:foreignKey(user),category_id:integer:defaultValue(1):foreignKey,title:string,body:text"
+
+#Создаем смежную таблицу для article и tag
+yii migrate/create create_junction_table_for_article_and_tag_tables
+
+
+yii migrate/create create_test_table --fields="id:primaryKey,name:string,created_at:timestamp:defaultValue(new Expression('NOW()')),updated_at:timestamp:defaultValue(new Expression('NOW()'))"
+
+yii migrate/create create_tag_table --fields="id:primaryKey,text:string,status:integer"
+
+
+
+yii migrate/create create_category_table --fields="id:primaryKey,name:string,desc:string"
+
+yii migrate/create create_city_table --fields="id:primaryKey,name:string"
+
+
+yii migrate/create create_article_table --fields="id:primaryKey,image_url:string,author_id:integer:notNull:foreignKey(user),time_publish:timestamp,city_id:integer:notNull:foreignKey(city),status:integer,views:integer,created_at:timestamp"
+
+yii migrate/create create_translate_table --fields="id:primaryKey,article_id:integer:notNull:foreignKey(article),meta-title:string,meta-description:string,meta-keywords:string,meta-type:string,slug:string,title:string,description:string,content:string,lang:string,translator_id:integer:notNull:foreignKey(user)"
+
+yii migrate/create create_comment_table --fields="id:primaryKey,article_id:integer:foreignKey(article),email:string,text:string,text:string,status:integer,created_at:timestamp:defaultValue(new Expression('NOW()')),updated_at:timestamp:defaultValue(new Expression('NOW()'))"
+
+yii migrate/create create_tag_table --fields="id:primaryKey,text:string,status:integer"
+
+
+yii migrate/create create_junction_table_for_article_and_tag_tables
+
+yii migrate/create create_junction_table_for_category_and_article_tables
