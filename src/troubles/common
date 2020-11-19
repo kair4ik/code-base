@@ -1,0 +1,10 @@
+
+
+1.Ошибка Uncaught TypeError
+
+<b>Fatal error</b>: Uncaught TypeError: Return value of
+App\Bus\Domain\Repositories\File\BaseApiCrudRepository::oneById() must implement interface
+ZnCore\Domain\Interfaces\Entity\EntityIdInterface, instance of App\Bus\Domain\Entities\DynamicEntity returned in
+C:\OpenServer\domains\bus.local\src\Bus\Domain\Repositories\File\BaseApiCrudRepository.php:99
+
+Эта ошибка значит, что  от метода oneById ожидается возвращение сущности EntityIdInterface, а возващается другая сущность которая не отнаследована от EntityIdInterface.
