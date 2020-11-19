@@ -1,0 +1,36 @@
+
+
+example.local
+
+1.
+sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/example.local.conf
+
+2.
+sudo nano /etc/apache2/sites-available/example.local.conf
+
+3.
+<VirtualHost *:80>
+	ServerName example.local
+	DocumentRoot /var/www/example.local/web
+
+	<Directory /var/www/example.local/web/>
+		Options Indexes FollowSymlinks
+		AllowOverride All
+		Order allow,deny
+		Allow from all
+		Require all granted
+	</Directory>
+
+	ErrorLog ${APACHE_LOG_DIR}/error.log
+	CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+
+4.
+127.0.0.1 example.local
+193.187.174.192 phone-catalog.kair4ik2.ml
+
+5.
+sudo a2ensite example.local.conf
+
+6.
+service apache2 restart
