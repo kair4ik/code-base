@@ -93,6 +93,7 @@ $a = new ConcreteFactoryA();
 $a->method(); // Class1 method
 
 /**
+
  * create FactoryB
  */
 $b = new ConcreteFactoryB();
