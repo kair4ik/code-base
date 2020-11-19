@@ -1,0 +1,27 @@
+
+
+
+
+
+mysql> CREATE USER 'kair4ik'@'localhost' IDENTIFIED BY 'kair4ik';
+mysql> GRANT ALL PRIVILEGES ON *.* TO 'kair4ik'@'localhost' WITH GRANT OPTION;
+FLUSH PRIVILEGES
+Вот такое делать не желательно
+mysql> CREATE USER 'monty'@'%' IDENTIFIED BY 'some_pass';
+mysql> GRANT ALL PRIVILEGES ON *.* TO 'monty'@'%'
+    ->     WITH GRANT OPTION;
+
+
+    SHOW GRANTS FOR kair4ik@localhost;
+
+
+    Гайд
+    https://stackoverflow.com/questions/16287559/mysql-adding-user-for-remote-access
+
+    CREATE USER 'kair4ik'@'localhost' IDENTIFIED BY 'kair4ik';
+    CREATE USER 'kair4ik'@'%' IDENTIFIED BY 'kair4ik';
+
+
+    GRANT ALL ON *.* TO 'kair4ik'@'localhost';
+    GRANT ALL ON *.* TO 'kair4ik'@'%';
+    flush privileges;

@@ -1,0 +1,23 @@
+
+Вариант №1
+/etc/init.d/mysqld start
+/etc/init.d/mysqld stop
+/etc/init.d/mysqld restart
+
+Вариант №2
+service mysqld start
+service mysqld stop
+service mysqld restart
+
+Вариант №3
+sudo /etc/init.d/mysql start
+sudo /etc/init.d/mysql stop
+sudo /etc/init.d/mysql restart
+
+Вариант №4
+sudo service mysql start
+sudo service mysql stop
+sudo service mysql restart
+
+
+
