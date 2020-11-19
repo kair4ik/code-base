@@ -5,9 +5,12 @@ My code base
 
 composer require kair4ik/code-base dev-master
 
+---
+Подсказки к коммитам:
+- **trouble** - проблема с которой столкнулся
+- **command** - новая команда
+- **sql** - какой-то sql код
+---
 
-Подсказки к коммитам
-trouble - проблема с которой столкнулся
-command - новая команда
-sql - какой-то sql код
+
 
