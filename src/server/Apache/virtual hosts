@@ -3,10 +3,10 @@
 example.local
 
 1.
-sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/example.local.conf
+sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/q-news.kz.conf
 
 2.
-sudo nano /etc/apache2/sites-available/example.local.conf
+sudo nano /etc/apache2/sites-available/q-news.kz.conf
 
 3.
 <VirtualHost *:80>
@@ -28,9 +28,10 @@ sudo nano /etc/apache2/sites-available/example.local.conf
 4.
 127.0.0.1 example.local
 193.187.174.192 phone-catalog.kair4ik2.ml
+185.113.134.65 q-news.kz
 
 5.
-sudo a2ensite example.local.conf
+sudo a2ensite q-news.kz.conf
 
 6.
 service apache2 restart
